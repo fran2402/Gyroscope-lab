@@ -1,0 +1,97 @@
+\documentclass[review]{elsarticle}
+\usepackage[nottoc]{tocbibind}
+\usepackage[document]{ragged2e}
+\usepackage[style=apa]{biblatex}
+\addbibresource{references.bib}
+\usepackage{float}
+\usepackage{verbatim}
+\usepackage{siunitx}
+\usepackage{tcolorbox}
+\usepackage{apalike}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{longtable}
+\usepackage{amssymb}
+\usepackage{pgfplots}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage[a4paper, margin=2.5cm]{geometry}
+\usepackage[english]{babel}
+\usepackage{svg}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage[labelfont=bf]{caption}
+\pgfplotsset{width=\textwidth}
+\def\n{\texttt}
+\def\r{\textrm}
+\def\b{\textbf}
+\def\i{\textit}
+\newcommand{\hs}{\hspace{5mm}}
+\newcommand{\vs}{\vspace{5mm}}
+\newcommand{\pc}{\textrm{ pc}}
+
+\def\n{\texttt}
+\def\r{\textrm}
+\def\b{\textbf}
+\def\i{\textit}
+\newcommand{\prg}{\noindent}
+\begin{document}
+\pagestyle{fancy}
+\fancyhead[R]{\today}
+\fancyhead[L]{Fran Stimac -- S5177774}
+
+
+
+\begin{center}
+    \textbf{\Large Gyroscope lab -- preparation}
+\end{center}
+\begin{tcolorbox}
+    \textbf{Q1} There are four shapes: solid sphere, spherical shell, solid cylinder, and cylindrical shell. The torque ($\tau$) applied to each shape is \SI{40}{\newton\meter}.
+\end{tcolorbox}
+\begin{table}[H]
+\centering
+\begin{tabular}{l|rr}
+ & \multicolumn{1}{l}{\textbf{$\alpha$ (\unit{\radian\per\second\squared})}} & \multicolumn{1}{l}{\textbf{I (\unit{\kilogram\second\squared})}} \\ \hline
+\textbf{Solid sphere} & 5 & 8.0 \\
+\textbf{Spherical shell} & 3 & 13.3 \\
+\textbf{Solid cylinder} & 4 & 10.0 \\
+\textbf{Cylindrical shell} & 2 & 20.0
+\end{tabular}
+\caption{Values found using the simulation}
+\label{tab:my-table}
+\end{table}
+\begin{itemize}
+    \item Greatest angular acceleration -- Solid sphere
+    \item Least angular acceleration -- Cylindrical shell
+    \item Greatest moment of inertia -- Cylindrical shell
+    \item Least moment of inertia -- Solid sphere
+\end{itemize}
+\begin{tcolorbox}
+\textbf{Q2} If only the radius is halved, what happens to the magnitude of the torque?
+\end{tcolorbox}
+\begin{equation}
+    \tau = rF\sin\theta
+\end{equation}
+Radius halves, therefore torque halves ($\tau \propto r$).
+\begin{tcolorbox}
+\textbf{Q3} If only the force is halved, what happens to the magnitude of the torque?
+\end{tcolorbox}
+Force halves, therefore torque halves ($\tau \propto F$).
+\begin{tcolorbox}
+\textbf{Q4} What is the angular acceleration of the solid cylinder?
+\end{tcolorbox}
+$\alpha=\SI{16}{\radian\per\second\squared}$
+
+\begin{tcolorbox}
+\textbf{Q5} What is the moment of inertia of the solid cylinder? For a solid cylinder rotating about the cylindrical axis, $I=\frac{MR^2}{2}$
+\end{tcolorbox}
+$I=\frac{10\times0.5^2}{2}=\SI{1.25}{\kilogram\meter\squared}$
+
+\begin{tcolorbox}
+\textbf{Q6} What is the angular velocity of the solid cylinder after 5 seconds?
+\end{tcolorbox}
+$\omega=16\times5=\SI{80}{\radian\per\second}$
+\end{document}
